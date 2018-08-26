@@ -1,4 +1,4 @@
-## eztree 
+## ezcaret
 Easy caret
 
 ### Description
