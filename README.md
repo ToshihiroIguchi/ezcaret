@@ -10,7 +10,7 @@ First, access [CRAN](https://cran.r-project.org/), download R and install.
 You can install from R console.
 First install related packages.
 
-    install.packages(c("shiny", "caret", "ggplot2", "randomForest"))
+    install.packages(c("plyr", "shiny", "caret", "ggplot2","arm", "bartMachine", "bst", "deepnet", "dplyr", "e1071", "earth", "elmNN", "evtree", "extraTrees", "FCNN4R", "foreach", "gam", "gbm", "glmnet", "import", "inTrees", "ipred", "keras", "kernlab", "kknn", "kohonen", "LiblineaR", "logicFS", "LogicReg", "MASS", "Matrix", "mboost", "mgcv", "monmlp", "msaenet", "mxnet", "nnet", "nodeHarvest", "partDSA", "party", "pls", "plsRglm", "randomForest", "randomGLM", "ranger", "Rborist", "rpart", "RRF", "RSNNS", "spls", "xgboost"))
 
 If packages are installed, it can be started from R console with the following command.
     
