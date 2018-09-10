@@ -25,7 +25,8 @@ server <- function(input, output, session) {
     output$xdata <- renderUI({
       checkboxGroupInput("xdata", 
                          label = "Explanatory variable",
-                         choices = colnames(csv_file()))
+                         choices = get.explanatory(csv_file(), input$ydata),
+                         selected = get.explanatory(csv_file(), input$ydata))
       })
     #手法を選択
     output$method <- renderUI({
@@ -37,10 +38,7 @@ server <- function(input, output, session) {
   observeEvent(input$submit, {
 
     csv_file <- reactive({read.csv(input$file$datapath)})
-    
 
-    
-    print(input$ydata)
     result <- reactive({train(form = chr2formula(y = input$ydata, x = input$xdata), 
                                        data = csv_file(),
                                        method = input$method)})
